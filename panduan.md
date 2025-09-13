@@ -27,7 +27,7 @@ Pisahkan menu (listnya saja) dari main.php → Buat menu.php → panggil di main
 
 Autentikasi (Login Users)
 1. Buat tabel users (id_user, nama, username, role, password, foto) → password di hash
-2. Buat file Users.php di 📁 model
+2. Buat file UsersModel.php di 📁 model
 3. Buat file Auth.php di 📁 controller
 4. Buat file login.php di 📁 Views/auth → copy dari template & sesuaikan dengan kebutuhan → sesuiakan action form & method
 5. Buat file AuthFilter.php (sebagai midleware/filter) & RoleFilter.php di 📂 app/Filters

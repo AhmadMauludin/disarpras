@@ -42,7 +42,7 @@ Autentikasi (Login Users)
 7. Tambahkan rute login, proseslogin & logout di App/Config/Routes.php
 8. Buat Filter Hak Akses & Terapkan di Routes.php
 9. Tambahkan tombol logout di menu / main
-10. Tambahkan data baru di database dengan data : id_user : 1, nama : admin, username : admin, role : admin, foto : admin.jpg, (password isikan dulu dengan $2y$10$FMQRdH0ecCbZZVWtN2n7/u1YZN/gr7X98Er4NG4sqDAWCXlZwmB6S
+10. Tambahkan data baru di database dengan data : id_user : 1, nama : admin, username : admin, role : admin, foto : admin.jpg, (password isikan dulu dengan `$2y$10$FMQRdH0ecCbZZVWtN2n7/u1YZN/gr7X98Er4NG4sqDAWCXlZwmB6S`
     ) created_at dikosongkan.
 
 Ujicoba halaman login dengan 3 cara

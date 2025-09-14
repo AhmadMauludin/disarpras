@@ -18,20 +18,20 @@ Konfigurasikan file env
 4. database.default.database = CI4 ubah menjadi database.default.database = namadatabase
 5. buang root pada bagian database.default.password
 
-Templating layouts
+Templating layouts (Ket : -ISC = Isikan Sesuai Sontoh, yang diberikan pada repository github)
 
-1. Download assets.zip, ekstrak lalu simpan di dalam folder root aplikasi
+1. Download assets.zip, ekstrak lalu simpan di dalam folder rootaplikasi/assets
 2. Buat folder baru bernama layouts di dalam folder Views
-3. Buat file baru di folder layouts bernama main.php
-4. Buat file baru di folder layouts bernama menu.php
-5. Buat file baru di folder layouts bernama dashboard.php
-6. Buat controller baru bernama Home
-7. Tambahkan routes
-8. Pada folder layouts Buat file menu.php
-9. Pisahkan menu (listnya saja) dari main.php → masukan ke menu.php
-10. Pada main.php tambahkan `<?= view('layouts/menu') ?>` pada bagian dimana sebelumnya list menu dipindahkan ke menu.php
-11. Pada main.php ganti tulisan `<div class="left"> <h6 class="text-medium mb-10">Yearly Stats</h6> </div>` dengan `<?= $this->renderSection('content'); ?>`
-12. Pada folder layouts buat file dashboard.php (isikan sesuai contoh)
+3. Buat file baru di folder layouts bernama main.php → isikan dengan isian template bootstrap (halaman blank.html atau index.html) lalu sesuaikan isinya dengan menghapus bagian yang tidak diperlukan
+4. Sesuaikan semua kode pemanggilan assets, misalkan `<link rel="stylesheet" href="assets/css/main.css" />` modifikasi menjadi `<link rel="stylesheet" href="<?= base_url('assets/css/main.css'); ?>" />` lakukan pada semua.
+5. Buat controller baru bernama Home.php -ISC
+6. Tambahkan routes baru pada file App/Config/Routes.php -ISC
+7. Pada folder layouts Buat file menu.php
+8. Pisahkan menu (listnya saja) dari main.php → masukan ke menu.php
+9. Pada main.php tambahkan `<?= view('layouts/menu') ?>` pada bagian dimana sebelumnya list menu dipindahkan ke menu.php
+10. Pada main.php ganti tulisan `<div class="left"> <h6 class="text-medium mb-10">Yearly Stats</h6> </div>` dengan `<?= $this->renderSection('content'); ?>` yang berfungsi untuk memanggil konten atau halaman yang akan ditampilkan
+11. Pada folder layouts buat file dashboard.php -ISC
+12. Buka App/Controllers/Home.php ubah `return view('layouts/main');` menjadi `return view('layouts/dashboard');`
 
 Autentikasi (Login Users)
 

@@ -27,8 +27,11 @@ Templating layouts
 5. Buat file baru di folder layouts bernama dashboard.php
 6. Buat controller baru bernama Home
 7. Tambahkan routes
-8. Pisahkan menu (listnya saja) dari main.php → Buat menu.php → panggil di main.php dengan menambahkan `<?= view('layouts/menu') ?>
-`
+8. Pada folder layouts Buat file menu.php
+9. Pisahkan menu (listnya saja) dari main.php → masukan ke menu.php
+10. Pada main.php tambahkan `<?= view('layouts/menu') ?>` pada bagian dimana sebelumnya list menu dipindahkan ke menu.php
+11. Pada main.php ganti tulisan `<div class="left"> <h6 class="text-medium mb-10">Yearly Stats</h6> </div>` dengan `<?= $this->renderSection('content'); ?>`
+12. Pada folder layouts buat file dashboard.php (isikan sesuai contoh)
 
 Autentikasi (Login Users)
 

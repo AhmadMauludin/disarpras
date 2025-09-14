@@ -18,7 +18,7 @@ Konfigurasikan file env
 4. database.default.database = CI4 ubah menjadi database.default.database = namadatabase
 5. buang root pada bagian database.default.password
 
-Templating layouts (Ket : -ISC = Isikan Sesuai Sontoh, yang diberikan pada repository github)
+Templating layouts (Ket : -ISC = Isikan Sesuai Contoh, yang diberikan pada repository github)
 
 1. Download assets.zip, ekstrak lalu simpan di dalam folder rootaplikasi/assets
 2. Buat folder baru bernama layouts di dalam folder Views

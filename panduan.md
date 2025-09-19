@@ -56,9 +56,11 @@ Ujicoba halaman login dengan 3 cara
 
 Halaman CRUD / Kelola Data Users
 
-1. Dalam folder views buat folder Users
-2. Dalam root folder buat folder uploads
-3. Dalam folder uploads buat folder users
-4. Buat Model
-5. Buat Controller
-6. Buat View
+1. Tambahkan link daftar di halaman login
+2. Tambahkan beberapa routes baru untuk mengelola Users
+3. Dalam folder views buat folder Users
+4. Dalam root folder buat folder uploads
+5. Dalam folder uploads yang baru dibuat buat folder users (untuk menyimpan foto yang dupload users)
+6. Buat file Users.php di folder Controller
+7. Buat file create.php di folder Views/users (untuk halaman tambah data)
+8. Buat file index.php di folder Views/users (untuk halaman tampil data)

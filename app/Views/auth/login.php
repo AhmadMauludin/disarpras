@@ -32,7 +32,6 @@
                 <p style="color:red"><?= session()->getFlashdata('salahpw') ?></p>
             <?php endif; ?>
 
-
             <form action="<?= base_url('/proses-login') ?>" method="post">
                 <div class="row">
                     <div class="col-12">
@@ -41,15 +40,12 @@
                             <input type="text" name="username" placeholder="username" />
                         </div>
                     </div>
-                    <!-- end col -->
                     <div class="col-12">
                         <div class="input-style-1">
                             <label>Password</label>
                             <input type="password" name="password" placeholder="Password" />
                         </div>
                     </div>
-
-                    <!-- end col -->
                     <div class="col-12">
                         <div class="button-group d-flex justify-content-center flex-wrap">
                             <button class="main-btn primary-btn btn-hover w-100 text-center">
@@ -58,8 +54,14 @@
                         </div>
                     </div>
                 </div>
-                <!-- end row -->
             </form>
+
+            <!-- Link ke halaman daftar -->
+            <br>
+            <p class="text-sm text-medium text-dark text-center">
+                Belum punya akun?
+                <a href="<?= site_url('users/create') ?>">Daftar</a>
+            </p>
         </div>
     </div>
 

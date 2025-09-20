@@ -805,3 +805,149 @@ DEBUG - 2025-09-20 16:19:31 --> Session: Class initialized using 'CodeIgniter\Se
 DEBUG - 2025-09-20 16:19:31 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-09-20 16:19:32 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
 DEBUG - 2025-09-20 16:20:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-20 16:45:54 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-20 16:45:55 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-20 16:46:15 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-20 16:46:33 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-20 16:47:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-20 16:47:07 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-20 16:47:14 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-20 16:47:21 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-20 16:47:30 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-20 16:47:34 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-20 16:50:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-20 16:50:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-20 16:54:20 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-20 16:54:23 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-20 16:55:12 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-09-20 16:55:12 --> mysqli_sql_exception: Column 'kode_sarana' cannot be null in C:\xampp\htdocs\disarpras\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\disarpras\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `sa...', 0)
+#1 C:\xampp\htdocs\disarpras\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 C:\xampp\htdocs\disarpras\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 C:\xampp\htdocs\disarpras\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', Array, false)
+#4 C:\xampp\htdocs\disarpras\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\disarpras\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\disarpras\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\disarpras\app\Controllers\Sarana.php(87): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\disarpras\system\CodeIgniter.php(933): App\Controllers\Sarana->store()
+#9 C:\xampp\htdocs\disarpras\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sarana))
+#10 C:\xampp\htdocs\disarpras\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\disarpras\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\disarpras\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\disarpras\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-09-20 16:55:13 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'kode_sarana' cannot be null
+[Method: POST, Route: sarana/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sarana` (`kode_sarana`, `nama_sarana`, `id_jenis`, `merk`, `tipe`, `nomor_seri`, `panjang`, `lebar`, `tinggi`, `berat`, `bahan`, `warna`, `jumlah`, `kondisi`, `lokasi`, `pinjam`, `tanggal_pengadaan`, `sumber_anggaran`, `harga_satuan`, `keterangan`) VALUES (:kode_sarana:, :nama_sarana:, :id_jenis:, :merk:, :tipe:, :nomor_seri:, :panjang:, :lebar:, :tinggi:, :berat:, :bahan:, :warna:, :jumlah:, :kondisi:, :lokasi:, :pinjam:, :tanggal_pengadaan:, :sumber_anggaran:, :harga_satuan:, :keterangan:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Sarana.php(87): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Sarana->store()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sarana))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-20 16:55:13 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'kode_sarana' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sarana` (`kode_sarana`, `nama_sarana`, `id_jenis`, `merk`, `tipe`, `nomor_seri`, `panjang`, `lebar`, `tinggi`, `berat`, `bahan`, `warna`, `jumlah`, `kondisi`, `lokasi`, `pinjam`, `tanggal_pengadaan`, `sumber_anggaran`, `harga_satuan`, `keterangan`) VALUES (NULL, \'wfsdfs\', \'2\', \'sdfs\', \'sdf\', \'44444\', \'33\', \'33\', \'33\', \'33\', \'sdfd\', \'dfs\', \'2\', \'Baik\', \'sdfds\', \'Boleh\', \'2025-09-20\', \'BOS\', \'324234\', \'rsrstdft\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sarana` (`kode_sarana`, `nama_sarana`, `id_jenis`, `merk`, `tipe`, `nomor_seri`, `panjang`, `lebar`, `tinggi`, `berat`, `bahan`, `warna`, `jumlah`, `kondisi`, `lokasi`, `pinjam`, `tanggal_pengadaan`, `sumber_anggaran`, `harga_satuan`, `keterangan`) VALUES (NULL, \'wfsdfs\', \'2\', \'sdfs\', \'sdf\', \'44444\', \'33\', \'33\', \'33\', \'33\', \'sdfd\', \'dfs\', \'2\', \'Baik\', \'sdfds\', \'Boleh\', \'2025-09-20\', \'BOS\', \'324234\', \'rsrstdft\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sarana` (`kode_sarana`, `nama_sarana`, `id_jenis`, `merk`, `tipe`, `nomor_seri`, `panjang`, `lebar`, `tinggi`, `berat`, `bahan`, `warna`, `jumlah`, `kondisi`, `lokasi`, `pinjam`, `tanggal_pengadaan`, `sumber_anggaran`, `harga_satuan`, `keterangan`) VALUES (:kode_sarana:, :nama_sarana:, :id_jenis:, :merk:, :tipe:, :nomor_seri:, :panjang:, :lebar:, :tinggi:, :berat:, :bahan:, :warna:, :jumlah:, :kondisi:, :lokasi:, :pinjam:, :tanggal_pengadaan:, :sumber_anggaran:, :harga_satuan:, :keterangan:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Sarana.php(87): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Sarana->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sarana))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-20 16:55:13 --> [Caused by] mysqli_sql_exception: Column 'kode_sarana' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `sarana` (`kode_sarana`, `nama_sarana`, `id_jenis`, `merk`, `tipe`, `nomor_seri`, `panjang`, `lebar`, `tinggi`, `berat`, `bahan`, `warna`, `jumlah`, `kondisi`, `lokasi`, `pinjam`, `tanggal_pengadaan`, `sumber_anggaran`, `harga_satuan`, `keterangan`) VALUES (NULL, \'wfsdfs\', \'2\', \'sdfs\', \'sdf\', \'44444\', \'33\', \'33\', \'33\', \'33\', \'sdfd\', \'dfs\', \'2\', \'Baik\', \'sdfds\', \'Boleh\', \'2025-09-20\', \'BOS\', \'324234\', \'rsrstdft\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sarana` (`kode_sarana`, `nama_sarana`, `id_jenis`, `merk`, `tipe`, `nomor_seri`, `panjang`, `lebar`, `tinggi`, `berat`, `bahan`, `warna`, `jumlah`, `kondisi`, `lokasi`, `pinjam`, `tanggal_pengadaan`, `sumber_anggaran`, `harga_satuan`, `keterangan`) VALUES (NULL, \'wfsdfs\', \'2\', \'sdfs\', \'sdf\', \'44444\', \'33\', \'33\', \'33\', \'33\', \'sdfd\', \'dfs\', \'2\', \'Baik\', \'sdfds\', \'Boleh\', \'2025-09-20\', \'BOS\', \'324234\', \'rsrstdft\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sarana` (`kode_sarana`, `nama_sarana`, `id_jenis`, `merk`, `tipe`, `nomor_seri`, `panjang`, `lebar`, `tinggi`, `berat`, `bahan`, `warna`, `jumlah`, `kondisi`, `lokasi`, `pinjam`, `tanggal_pengadaan`, `sumber_anggaran`, `harga_satuan`, `keterangan`) VALUES (NULL, \'wfsdfs\', \'2\', \'sdfs\', \'sdf\', \'44444\', \'33\', \'33\', \'33\', \'33\', \'sdfd\', \'dfs\', \'2\', \'Baik\', \'sdfds\', \'Boleh\', \'2025-09-20\', \'BOS\', \'324234\', \'rsrstdft\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sarana` (`kode_sarana`, `nama_sarana`, `id_jenis`, `merk`, `tipe`, `nomor_seri`, `panjang`, `lebar`, `tinggi`, `berat`, `bahan`, `warna`, `jumlah`, `kondisi`, `lokasi`, `pinjam`, `tanggal_pengadaan`, `sumber_anggaran`, `harga_satuan`, `keterangan`) VALUES (:kode_sarana:, :nama_sarana:, :id_jenis:, :merk:, :tipe:, :nomor_seri:, :panjang:, :lebar:, :tinggi:, :berat:, :bahan:, :warna:, :jumlah:, :kondisi:, :lokasi:, :pinjam:, :tanggal_pengadaan:, :sumber_anggaran:, :harga_satuan:, :keterangan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Sarana.php(87): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Sarana->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sarana))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-09-20 16:56:09 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+ERROR - 2025-09-20 16:56:09 --> mysqli_sql_exception: Column 'kode_sarana' cannot be null in C:\xampp\htdocs\disarpras\system\Database\MySQLi\Connection.php:327
+Stack trace:
+#0 C:\xampp\htdocs\disarpras\system\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `sa...', 0)
+#1 C:\xampp\htdocs\disarpras\system\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sa...')
+#2 C:\xampp\htdocs\disarpras\system\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sa...')
+#3 C:\xampp\htdocs\disarpras\system\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sa...', Array, false)
+#4 C:\xampp\htdocs\disarpras\system\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+#5 C:\xampp\htdocs\disarpras\system\BaseModel.php(838): CodeIgniter\Model->doInsert(Array)
+#6 C:\xampp\htdocs\disarpras\system\Model.php(797): CodeIgniter\BaseModel->insert(Array, true)
+#7 C:\xampp\htdocs\disarpras\app\Controllers\Sarana.php(87): CodeIgniter\Model->insert(Array)
+#8 C:\xampp\htdocs\disarpras\system\CodeIgniter.php(933): App\Controllers\Sarana->store()
+#9 C:\xampp\htdocs\disarpras\system\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sarana))
+#10 C:\xampp\htdocs\disarpras\system\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(NULL, Object(Config\Cache), false)
+#11 C:\xampp\htdocs\disarpras\system\Boot.php(363): CodeIgniter\CodeIgniter->run()
+#12 C:\xampp\htdocs\disarpras\system\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+#13 C:\xampp\htdocs\disarpras\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+#14 {main}
+CRITICAL - 2025-09-20 16:56:09 --> CodeIgniter\Database\Exceptions\DatabaseException: Column 'kode_sarana' cannot be null
+[Method: POST, Route: sarana/store]
+in SYSTEMPATH\Database\BaseConnection.php on line 684.
+ 1 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sarana` (`kode_sarana`, `nama_sarana`, `id_jenis`, `merk`, `tipe`, `nomor_seri`, `panjang`, `lebar`, `tinggi`, `berat`, `bahan`, `warna`, `jumlah`, `kondisi`, `lokasi`, `pinjam`, `tanggal_pengadaan`, `sumber_anggaran`, `harga_satuan`, `keterangan`) VALUES (:kode_sarana:, :nama_sarana:, :id_jenis:, :merk:, :tipe:, :nomor_seri:, :panjang:, :lebar:, :tinggi:, :berat:, :bahan:, :warna:, :jumlah:, :kondisi:, :lokasi:, :pinjam:, :tanggal_pengadaan:, :sumber_anggaran:, :harga_satuan:, :keterangan:)', [...], false)
+ 2 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 3 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 4 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 5 APPPATH\Controllers\Sarana.php(87): CodeIgniter\Model->insert([...])
+ 6 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Sarana->store()
+ 7 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sarana))
+ 8 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+ 9 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+10 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+11 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-20 16:56:09 --> [Caused by] CodeIgniter\Database\Exceptions\DatabaseException: Column 'kode_sarana' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 332.
+ 1 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sarana` (`kode_sarana`, `nama_sarana`, `id_jenis`, `merk`, `tipe`, `nomor_seri`, `panjang`, `lebar`, `tinggi`, `berat`, `bahan`, `warna`, `jumlah`, `kondisi`, `lokasi`, `pinjam`, `tanggal_pengadaan`, `sumber_anggaran`, `harga_satuan`, `keterangan`) VALUES (NULL, \'wfsdfs\', \'2\', \'sdfs\', \'sdf\', \'44444\', \'33\', \'33\', \'33\', \'33\', \'sdfd\', \'dfs\', \'2\', \'Baik\', \'sdfds\', \'Boleh\', \'2025-09-20\', \'BOS\', \'324234\', \'rsrstdft\')')
+ 2 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sarana` (`kode_sarana`, `nama_sarana`, `id_jenis`, `merk`, `tipe`, `nomor_seri`, `panjang`, `lebar`, `tinggi`, `berat`, `bahan`, `warna`, `jumlah`, `kondisi`, `lokasi`, `pinjam`, `tanggal_pengadaan`, `sumber_anggaran`, `harga_satuan`, `keterangan`) VALUES (NULL, \'wfsdfs\', \'2\', \'sdfs\', \'sdf\', \'44444\', \'33\', \'33\', \'33\', \'33\', \'sdfd\', \'dfs\', \'2\', \'Baik\', \'sdfds\', \'Boleh\', \'2025-09-20\', \'BOS\', \'324234\', \'rsrstdft\')')
+ 3 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sarana` (`kode_sarana`, `nama_sarana`, `id_jenis`, `merk`, `tipe`, `nomor_seri`, `panjang`, `lebar`, `tinggi`, `berat`, `bahan`, `warna`, `jumlah`, `kondisi`, `lokasi`, `pinjam`, `tanggal_pengadaan`, `sumber_anggaran`, `harga_satuan`, `keterangan`) VALUES (:kode_sarana:, :nama_sarana:, :id_jenis:, :merk:, :tipe:, :nomor_seri:, :panjang:, :lebar:, :tinggi:, :berat:, :bahan:, :warna:, :jumlah:, :kondisi:, :lokasi:, :pinjam:, :tanggal_pengadaan:, :sumber_anggaran:, :harga_satuan:, :keterangan:)', [...], false)
+ 4 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 5 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 6 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 7 APPPATH\Controllers\Sarana.php(87): CodeIgniter\Model->insert([...])
+ 8 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Sarana->store()
+ 9 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sarana))
+10 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+11 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+12 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+13 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+CRITICAL - 2025-09-20 16:56:09 --> [Caused by] mysqli_sql_exception: Column 'kode_sarana' cannot be null
+in SYSTEMPATH\Database\MySQLi\Connection.php on line 327.
+ 1 SYSTEMPATH\Database\MySQLi\Connection.php(327): mysqli->query('INSERT INTO `sarana` (`kode_sarana`, `nama_sarana`, `id_jenis`, `merk`, `tipe`, `nomor_seri`, `panjang`, `lebar`, `tinggi`, `berat`, `bahan`, `warna`, `jumlah`, `kondisi`, `lokasi`, `pinjam`, `tanggal_pengadaan`, `sumber_anggaran`, `harga_satuan`, `keterangan`) VALUES (NULL, \'wfsdfs\', \'2\', \'sdfs\', \'sdf\', \'44444\', \'33\', \'33\', \'33\', \'33\', \'sdfd\', \'dfs\', \'2\', \'Baik\', \'sdfds\', \'Boleh\', \'2025-09-20\', \'BOS\', \'324234\', \'rsrstdft\')', 0)
+ 2 SYSTEMPATH\Database\BaseConnection.php(729): CodeIgniter\Database\MySQLi\Connection->execute('INSERT INTO `sarana` (`kode_sarana`, `nama_sarana`, `id_jenis`, `merk`, `tipe`, `nomor_seri`, `panjang`, `lebar`, `tinggi`, `berat`, `bahan`, `warna`, `jumlah`, `kondisi`, `lokasi`, `pinjam`, `tanggal_pengadaan`, `sumber_anggaran`, `harga_satuan`, `keterangan`) VALUES (NULL, \'wfsdfs\', \'2\', \'sdfs\', \'sdf\', \'44444\', \'33\', \'33\', \'33\', \'33\', \'sdfd\', \'dfs\', \'2\', \'Baik\', \'sdfds\', \'Boleh\', \'2025-09-20\', \'BOS\', \'324234\', \'rsrstdft\')')
+ 3 SYSTEMPATH\Database\BaseConnection.php(646): CodeIgniter\Database\BaseConnection->simpleQuery('INSERT INTO `sarana` (`kode_sarana`, `nama_sarana`, `id_jenis`, `merk`, `tipe`, `nomor_seri`, `panjang`, `lebar`, `tinggi`, `berat`, `bahan`, `warna`, `jumlah`, `kondisi`, `lokasi`, `pinjam`, `tanggal_pengadaan`, `sumber_anggaran`, `harga_satuan`, `keterangan`) VALUES (NULL, \'wfsdfs\', \'2\', \'sdfs\', \'sdf\', \'44444\', \'33\', \'33\', \'33\', \'33\', \'sdfd\', \'dfs\', \'2\', \'Baik\', \'sdfds\', \'Boleh\', \'2025-09-20\', \'BOS\', \'324234\', \'rsrstdft\')')
+ 4 SYSTEMPATH\Database\BaseBuilder.php(2345): CodeIgniter\Database\BaseConnection->query('INSERT INTO `sarana` (`kode_sarana`, `nama_sarana`, `id_jenis`, `merk`, `tipe`, `nomor_seri`, `panjang`, `lebar`, `tinggi`, `berat`, `bahan`, `warna`, `jumlah`, `kondisi`, `lokasi`, `pinjam`, `tanggal_pengadaan`, `sumber_anggaran`, `harga_satuan`, `keterangan`) VALUES (:kode_sarana:, :nama_sarana:, :id_jenis:, :merk:, :tipe:, :nomor_seri:, :panjang:, :lebar:, :tinggi:, :berat:, :bahan:, :warna:, :jumlah:, :kondisi:, :lokasi:, :pinjam:, :tanggal_pengadaan:, :sumber_anggaran:, :harga_satuan:, :keterangan:)', [...], false)
+ 5 SYSTEMPATH\Model.php(394): CodeIgniter\Database\BaseBuilder->insert()
+ 6 SYSTEMPATH\BaseModel.php(838): CodeIgniter\Model->doInsert([...])
+ 7 SYSTEMPATH\Model.php(797): CodeIgniter\BaseModel->insert([...], true)
+ 8 APPPATH\Controllers\Sarana.php(87): CodeIgniter\Model->insert([...])
+ 9 SYSTEMPATH\CodeIgniter.php(933): App\Controllers\Sarana->store()
+10 SYSTEMPATH\CodeIgniter.php(507): CodeIgniter\CodeIgniter->runController(Object(App\Controllers\Sarana))
+11 SYSTEMPATH\CodeIgniter.php(354): CodeIgniter\CodeIgniter->handleRequest(null, Object(Config\Cache), false)
+12 SYSTEMPATH\Boot.php(363): CodeIgniter\CodeIgniter->run()
+13 SYSTEMPATH\Boot.php(68): CodeIgniter\Boot::runCodeIgniter(Object(CodeIgniter\CodeIgniter))
+14 FCPATH\index.php(59): CodeIgniter\Boot::bootWeb(Object(Config\Paths))
+DEBUG - 2025-09-20 16:56:10 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-20 16:56:29 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-20 16:57:51 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-20 17:08:56 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-20 17:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.
+DEBUG - 2025-09-20 17:09:04 --> Session: Class initialized using 'CodeIgniter\Session\Handlers\FileHandler' driver.

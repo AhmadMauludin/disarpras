@@ -64,3 +64,13 @@ Halaman CRUD / Kelola Data Users
 6. Buat file Users.php di folder Controller
 7. Buat file create.php di folder Views/users (untuk halaman tambah data)
 8. Buat file index.php di folder Views/users (untuk halaman tampil data)
+
+FUNGSI SETIAP FILE
+
+1. Routes (App/Routes.php) -> File yang menyimpan jalur untuk menampilkan file tampilan atau menjalankan function.
+2. Model (Models/UsersModel.php) -> File yang memodelkan Tabel users dalam aplikasi.
+3. Controller (Controllers/Users.php) -> Penyimpanan beberapa function sebagai perintah/method untuk mengelola data users.
+4. Views (folder Views/users yang berisi file :
+   - index.php -> Halaman tampil data
+   - create.php -> Halaman tambah data
+   - edit.php -> Halaman edit data

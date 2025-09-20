@@ -14,7 +14,7 @@ $admin     = ['filter' => 'role:admin'];
 $guru      = ['filter' => 'role:guru'];
 $siswa      = ['filter' => 'role:siswa'];
 $kepsek      = ['filter' => 'role:kepsek'];
-$allRole   = ['filter' => 'role:admin, siswa, guru'];
+$allRole   = ['filter' => 'role:admin, siswa, guru, kepsek'];
 
 // Login
 $routes->get('/login', 'Auth::login');

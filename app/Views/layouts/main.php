@@ -23,15 +23,13 @@
     <!-- ======== sidebar-nav start =========== -->
     <aside class="sidebar-nav-wrapper">
         <div class="navbar-logo">
-            <a href="#">
-                <img src="<?= base_url('assets/images/logo/logo.svg'); ?>" alt="logo'); ?>" />
+            <a href="<?= site_url('/') ?>">
+                <h2>Disarpras</h2>
             </a>
         </div>
         <nav class="sidebar-nav">
             <ul>
-                <span class="divider">
-                    <hr />
-                </span>
+
                 <?= view('layouts/menu') ?>
             </ul>
         </nav>
@@ -49,7 +47,7 @@
                         <div class="header-left d-flex align-items-center">
                             <div class="menu-toggle-btn mr-15">
                                 <button id="menu-toggle" class="main-btn primary-btn btn-hover">
-                                    Menu
+                                    <i class="lni lni-chevron-left me-2"></i> Menu
                                 </button>
                             </div>
                         </div>

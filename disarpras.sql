@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Sep 13, 2025 at 10:33 AM
+-- Generation Time: Sep 20, 2025 at 09:37 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -42,7 +42,9 @@ CREATE TABLE `users` (
 --
 
 INSERT INTO `users` (`id_user`, `nama`, `username`, `password`, `role`, `foto`, `created_at`) VALUES
-(1, 'admin', 'admin', '$2y$10$FMQRdH0ecCbZZVWtN2n7/u1YZN/gr7X98Er4NG4sqDAWCXlZwmB6S', 'admin', 'admin.jpg', '2025-09-13 08:00:34');
+(1, 'Ahmad Mauludin', 'ahmad', '$2y$10$iCFf0dZ4itSOzGM1MwuQZuTUnfwTBS/VCwpo75zcdb2Gncdy3mkda', 'admin', '1758302595_f9f7708b54b2a01e1df7.png', '2025-09-19 17:33:28'),
+(3, 'Saheela Meera', 'saheela', '$2y$10$s10ibmJk1XDALP.r0cHJVOmKLvk5GtXPm/u0CLLDUgDeV8sDF.PrK', 'siswa', '1758295400_24a058de7c8d0fb11e2f.png', '2025-09-20 07:34:40'),
+(6, 'Fauzi Rachman, S.HI', 'fauzi', '$2y$10$VW/aX1JoCIFESduo06DHt.BRY9gzMAnECHCC6sk0QMbg.PG9YsVka', 'kepsek', '1758353635_caf7f34c8c5d16eede43.png', '2025-09-20 07:35:30');
 
 --
 -- Indexes for dumped tables
@@ -62,7 +64,7 @@ ALTER TABLE `users`
 -- AUTO_INCREMENT for table `users`
 --
 ALTER TABLE `users`
-  MODIFY `id_user` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
+  MODIFY `id_user` int(20) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

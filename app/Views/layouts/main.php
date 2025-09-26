@@ -18,7 +18,7 @@
 
 <body>
 
-    <?php $idu = session('id_user'); ?>
+    <?php $idu = session('id_user'); ?> // INI PENTING - UNTUK MENYIMPAN SESI ID KE DALAM VARIABEL
 
     <!-- ======== sidebar-nav start =========== -->
     <aside class="sidebar-nav-wrapper">
@@ -30,7 +30,7 @@
         <nav class="sidebar-nav">
             <ul>
 
-                <?= view('layouts/menu') ?>
+                <?= view('layouts/menu') ?> // INI PENTING - UNTUK MEMANGGIL HALAMAN MENU
             </ul>
         </nav>
     </aside>
@@ -61,22 +61,25 @@
                                     <div class="profile-info">
                                         <div class="info">
                                             <div class="image">
-                                                <img src="<?= base_url('uploads/users/' . session()->get('foto')) ?>" />
+
+// PENTING - DARI SINI
+                                                <img src="<?= base_url('uploads/users/' . session()->get('foto')) ?>" /> 
                                             </div>
                                             <div>
                                                 <h6 class="fw-500"><?= session('nama'); ?></h6>
                                                 <p><?= session('role'); ?></p>
+// SAMPAI SINI - PENTING - UNTUK NAMPILKAN FOTO NAMA DAN ROLE
                                             </div>
                                         </div>
                                     </div>
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile">
                                     <li>
-                                        <a href="<?= site_url('users/edit/' . $idu) ?>"> <i class="lni lni-cog"></i> Settings </a>
+                                        <a href="<?= site_url('users/edit/' . $idu) ?>"> <i class="lni lni-cog"></i> Settings </a> // INI PENTING - UNTUK LINK EDIT DATA
                                     </li>
                                     <li class="divider"></li>
                                     <li>
-                                        <a href="<?= site_url('/logout') ?>"> <i class="lni lni-exit"></i> Sign Out </a>
+                                        <a href="<?= site_url('/logout') ?>"> <i class="lni lni-exit"></i> Sign Out </a> // INI PENTING - UNTUK TOMBOL LOG OUT
                                     </li>
                                 </ul>
                             </div>
@@ -96,7 +99,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-style mb-30">
-                            <?= $this->renderSection('content'); ?>
+                            <?= $this->renderSection('content'); ?> // INI PALING PENTING - MENAMPILKAN KONTEN HALAMAN
                         </div>
                     </div>
                 </div>

@@ -29,7 +29,6 @@
         </div>
         <nav class="sidebar-nav">
             <ul>
-
                 <?= view('layouts/menu') ?>
             </ul>
         </nav>
@@ -74,7 +73,9 @@
                                     <li>
                                         <a href="<?= site_url('users/edit/' . $idu) ?>"> <i class="lni lni-cog"></i> Settings </a>
                                     </li>
-                                    <li class="divider"></li>
+                                    <li>
+                                        <a href="<?= site_url('/backup') ?>"> <i class="lni lni-cloud-download"></i> Backup DB </a>
+                                    </li>
                                     <li>
                                         <a href="<?= site_url('/logout') ?>"> <i class="lni lni-exit"></i> Sign Out </a>
                                     </li>

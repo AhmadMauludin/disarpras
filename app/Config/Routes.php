@@ -12,8 +12,9 @@ $authFilter = ['filter' => 'auth'];
 // Variabel Role
 $admin     = ['filter' => 'role:admin'];
 $guru      = ['filter' => 'role:guru'];
-$siswa      = ['filter' => 'role:siswa'];
-$kepsek      = ['filter' => 'role:kepsek'];
+$siswa     = ['filter' => 'role:siswa'];
+$user      = ['filter' => 'role:siswa, guru'];
+$kepsek    = ['filter' => 'role:kepsek'];
 $allRole   = ['filter' => 'role:admin, siswa, guru, kepsek'];
 
 // Login
@@ -51,3 +52,17 @@ $routes->get('sarana/delete/(:num)', 'Sarana::delete/$1', $admin);
 $routes->get('sarana/detail/(:num)', 'Sarana::detail/$1', $allRole);
 $routes->post('sarana/addFoto/(:num)', 'Sarana::addFoto/$1', $admin);
 $routes->get('sarana/deleteFoto/(:num)/(:num)', 'Sarana::deleteFoto/$1/$2', $admin);
+
+// peminjaman
+$routes->get('peminjaman', 'Peminjaman::index', $allRole);
+$routes->get('peminjaman/create', 'Peminjaman::create', $user);
+$routes->post('peminjaman/store', 'Peminjaman::store', $user);
+$routes->get('peminjaman/edit/(:num)', 'Peminjaman::edit/$1', $admin);
+$routes->get('peminjaman/cetak/(:num)', 'Peminjaman::cetak/$1', $allRole);
+$routes->post('peminjaman/update/(:num)', 'Peminjaman::update/$1', $admin);
+$routes->get('/peminjaman/cancel/(:num)', 'Peminjaman::cancel/$1', ['filter' => 'role:siswa,guru']);
+$routes->get('/peminjaman/delete/(:num)', 'Peminjaman::delete/$1', ['filter' => 'role:admin']);
+
+
+// Backup Database
+$routes->get('/backup', 'Backup::database', $allRole);

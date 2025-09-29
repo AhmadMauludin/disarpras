@@ -1,21 +1,41 @@
 <?= $this->extend('layouts/main'); ?>
 <?= $this->section('content'); ?>
-<?php if (session()->getFlashdata('error')): ?>
-    <p><?= session()->getFlashdata('error') ?></p>
-<?php endif; ?>
 
-<form action="<?= base_url('/jenis/store') ?>" method="post" enctype="multipart/form-data">
-    <b>Tambah jenis</b>
+<div class="col-lg-8 col-md-10 col-12">
+    <h2 class="mb-10">Tambah Jenis</h2>
 
-    <p>nama_jenis
-        <input type="text" name="nama_jenis" placeholder="nama_jenis" />
+    <?php if (session()->getFlashdata('error')): ?>
+        <div class="alert-box danger-alert">
+            <?= session()->getFlashdata('error') ?>
+        </div>
+    <?php endif; ?>
 
-    <p>keterangan
-        <input type="text" name="keterangan" placeholder="keterangan" />
+    <form action="<?= base_url('/jenis/store') ?>" method="post" enctype="multipart/form-data">
 
-    <p>Foto
-        <input type="file" name="foto" placeholder="foto" />
-    <p>
-        <button type="submit">Tambahkan</button>
-</form>
+        <div class="input-style-1">
+            <label for="nama_jenis">Nama Jenis</label>
+            <input type="text" name="nama_jenis" id="nama_jenis" placeholder="Masukkan nama jenis" required>
+        </div>
+
+        <div class="input-style-1">
+            <label for="keterangan">Keterangan</label>
+            <input type="text" name="keterangan" id="keterangan" placeholder="Masukkan keterangan">
+        </div>
+
+        <div class="input-style-1">
+            <label for="foto">Foto</label>
+            <input type="file" name="foto" id="foto" accept="image/*">
+        </div>
+
+        <div class="button-group mt-3">
+            <button type="submit" class="main-btn primary-btn btn-hover">
+                <i class="lni lni-plus"></i> Tambahkan
+            </button>
+            <a href="<?= site_url('jenis') ?>" class="main-btn danger-btn btn-hover">
+                <i class="lni lni-close"></i> Batal
+            </a>
+        </div>
+    </form>
+</div>
+
 <?= $this->endSection(); ?>

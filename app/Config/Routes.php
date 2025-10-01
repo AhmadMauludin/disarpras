@@ -34,6 +34,10 @@ $routes->get('users/edit/(:num)', 'users::edit/$1', $allRole);
 $routes->post('users/update/(:num)', 'users::update/$1', $allRole);
 $routes->get('users/delete/(:num)', 'users::delete/$1', $admin);
 
+// profil
+$routes->get('profil/edit/(:num)', 'profil::edit/$1', $allRole);
+$routes->post('profil/update/(:num)', 'profil::update/$1', $allRole);
+
 // jenis
 $routes->get('jenis', 'jenis::index', $admin);
 $routes->get('jenis/create', 'jenis::create');

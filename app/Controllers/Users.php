@@ -44,23 +44,46 @@ class Users extends Controller
         return view('users/create', $data);
     }
 
-    // Menyimpan data users baru yang diinput dari halaman daftar
     public function store()
     {
-        $model = new UsersModel();
+        $userModel   = new \App\Models\UsersModel();
+        $profilModel = new \App\Models\ProfilModel();
+
+        // Hash password
         $password = password_hash($this->request->getPost('password'), PASSWORD_DEFAULT);
 
-        $data = [
-            'nama' => $this->request->getPost('nama'),
+        // Data user baru
+        $dataUser = [
+            'nama'     => $this->request->getPost('nama'),
             'username' => $this->request->getPost('username'),
-            'role' => $this->request->getPost('role'),
+            'role'     => $this->request->getPost('role'),
             'password' => $password,
-            'foto' => $this->uploadFoto()
+            'foto'     => $this->uploadFoto()
         ];
 
-        $model->insert($data);
+        // Simpan user baru
+        $userModel->insert($dataUser);
+
+        // Ambil id user terakhir yang baru saja dibuat
+        $idUserBaru = $userModel->getInsertID();
+
+        // Insert data profil default (nama_profil = nama user)
+        $dataProfil = [
+            'nama_profil' => $this->request->getPost('nama'),
+            'id_user'     => $idUserBaru,
+            // field lain masih null, nanti bisa diedit di halaman edit profil
+            'alamat'      => null,
+            'no_telp'     => null,
+            'email'       => null,
+            'kelas'       => null,
+            'keterangan'  => null
+        ];
+
+        $profilModel->insert($dataProfil);
+
         return redirect()->to('/')->with('success', 'Anda telah terdaftar, silahkan login.');
     }
+
 
     // Menampilkan halaman views/users/edit (pengaturan)
     public function edit($id)

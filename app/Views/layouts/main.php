@@ -59,8 +59,6 @@
                                     <div class="profile-info">
                                         <div class="info">
                                             <div class="image">
-
-
                                                 <img src="<?= base_url('uploads/users/' . session()->get('foto')) ?>" />
                                             </div>
                                             <div>
@@ -73,6 +71,9 @@
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile">
                                     <li>
                                         <a href="<?= site_url('users/edit/' . $idu) ?>"> <i class="lni lni-cog"></i> Settings </a>
+                                    </li>
+                                    <li>
+                                        <a href="<?= site_url('profil/edit/' . $idu) ?>"> <i class="lni lni-user"></i> Profil </a>
                                     </li>
                                     <li>
                                         <a href="<?= site_url('/backup') ?>"> <i class="lni lni-cloud-download"></i> Backup DB </a>

@@ -17,6 +17,7 @@
             <select name="status" id="status" required>
                 <option value="pending" <?= $peminjaman['status'] == 'pending' ? 'selected' : '' ?>>Pending</option>
                 <option value="disetujui" <?= $peminjaman['status'] == 'disetujui' ? 'selected' : '' ?>>Disetujui</option>
+                <option value="dipinjam" <?= $peminjaman['status'] == 'dipinjam' ? 'selected' : '' ?>>Dipinjam</option>
                 <option value="ditolak" <?= $peminjaman['status'] == 'ditolak' ? 'selected' : '' ?>>Ditolak</option>
                 <option value="dikembalikan" <?= $peminjaman['status'] == 'dikembalikan' ? 'selected' : '' ?>>Dikembalikan</option>
             </select>

@@ -18,8 +18,7 @@
 
 <body>
 
-    <?php $idu = session('id_user'); ?> // INI PENTING - UNTUK MENYIMPAN SESI ID KE DALAM VARIABEL
-
+    <?php $idu = session('id_user'); ?>
     <!-- ======== sidebar-nav start =========== -->
     <aside class="sidebar-nav-wrapper">
         <div class="navbar-logo">
@@ -29,12 +28,7 @@
         </div>
         <nav class="sidebar-nav">
             <ul>
-<<<<<<< HEAD
                 <?= view('layouts/menu') ?>
-=======
-
-                <?= view('layouts/menu') ?> // INI PENTING - UNTUK MEMANGGIL HALAMAN MENU
->>>>>>> 7ef1741625495aab4b3537138a35083124936e58
             </ul>
         </nav>
     </aside>
@@ -66,26 +60,25 @@
                                         <div class="info">
                                             <div class="image">
 
-// PENTING - DARI SINI
-                                                <img src="<?= base_url('uploads/users/' . session()->get('foto')) ?>" /> 
+
+                                                <img src="<?= base_url('uploads/users/' . session()->get('foto')) ?>" />
                                             </div>
                                             <div>
                                                 <h6 class="fw-500"><?= session('nama'); ?></h6>
                                                 <p><?= session('role'); ?></p>
-// SAMPAI SINI - PENTING - UNTUK NAMPILKAN FOTO NAMA DAN ROLE
                                             </div>
                                         </div>
                                     </div>
                                 </button>
                                 <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="profile">
                                     <li>
-                                        <a href="<?= site_url('users/edit/' . $idu) ?>"> <i class="lni lni-cog"></i> Settings </a> // INI PENTING - UNTUK LINK EDIT DATA
+                                        <a href="<?= site_url('users/edit/' . $idu) ?>"> <i class="lni lni-cog"></i> Settings </a>
                                     </li>
                                     <li>
                                         <a href="<?= site_url('/backup') ?>"> <i class="lni lni-cloud-download"></i> Backup DB </a>
                                     </li>
                                     <li>
-                                        <a href="<?= site_url('/logout') ?>"> <i class="lni lni-exit"></i> Sign Out </a> // INI PENTING - UNTUK TOMBOL LOG OUT
+                                        <a href="<?= site_url('/logout') ?>"> <i class="lni lni-exit"></i> Sign Out </a>
                                     </li>
                                 </ul>
                             </div>
@@ -105,7 +98,7 @@
                 <div class="row">
                     <div class="col-lg-12">
                         <div class="card-style mb-30">
-                            <?= $this->renderSection('content'); ?> // INI PALING PENTING - MENAMPILKAN KONTEN HALAMAN
+                            <?= $this->renderSection('content'); ?>
                         </div>
                     </div>
                 </div>
